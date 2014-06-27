@@ -1,0 +1,98 @@
+
+<html>
+   <head> 
+	<link rel ="stylesheet" type="text/css" href="css/estilos.css">
+	<title> Lista de Equipos </title>
+   </head>
+ <body>
+ <table align="center" class="menu">
+   <tr>
+    <th><a href ="ListaEquipos.html"> Lista de Equipos </a></th>
+    <th><a href ="Calendario_resultados.html">Calendario y Resultados</a> </th>
+    <th><a href ="tablaGrupos.html">Tabla de grupos</a> </th>
+   </tr>
+    <tr>
+     <th><a href ="Goleo_individual.html">Goleo individual </a> </th>
+     <th><a href ="Goleo_equipos.html">Goleo por equipos </a></th>
+     <th><a href ="Estadisticas.html">Estad&iacute;sticas de grupos </a></th>
+     </tr>
+    <tr>
+  	 <th colospan="3"><a href ="Noticias.html"> Noticias </a> </th>
+  </tr>
+  <tr>
+   <th colospan="3"><a href ="capturaResultados.html"> Captura de Resultados</a> </th>
+  </tr>
+</table>
+	<div align="center">
+ 	  <img width="30%" height="30%" src="images/brasil.png" />
+	</div>
+    <form name="resultadosForm" method ="post" action ="guardar.php">
+		<table border ="0" align="center" width ="50%">
+		<caption><h2>Captura de Resultados</h2></caption>
+    <tr>
+    <th>Fecha</th>
+    <th>Equipo Local</th> 
+    <th>Marcador</th>
+    <th>Equipo Visitante</th>    
+    </tr>
+    <tr>
+      <td> 23/Junio/2014</td>
+          <td><img width="80%" height="80%" src="images/croacia.jpg" align ="center"/> 
+        Croacia
+      </td> 
+      <td> <input type ="text" name="equipo1_local" value"" style="width:30px;"/>  -
+           <input type ="text" name="equipo2_visitante" value"" style="width:30px;" />
+      </td>
+      <td><img width="80%" height="80%" src="images/mexico.jpg" align ="center" /> 
+        M&eacute;xico
+      </td> 
+        </tr>
+
+          <tr>
+      <td> 23/Junio/2014</td>
+          <td><img width="80%" height="80%" src="images/italia.jpg" aling ="center" /> 
+        Italia
+      </td> 
+      <td> <input type ="text" name="equipo1_local" value"" style="width:30px;"/>  -
+           <input type ="text" name="equipo2_visitante" value"" style="width:30px;" />
+      </td>
+      <td><img width="80%" height="80%" src="images/uruguay.jpg" align="center"/> 
+        Uruguay
+      </td> 
+      </tr>
+
+      <tr>
+      <td> 23/Junio/2014</td>
+       <td>
+       <select name ="equipo1_local">
+              <option value =""></option>
+              <option value ="mx">M&eacute;xico</option>
+              <option value ="br">Brasil</option>                  
+            </select>
+          <img width="80%" height="80%" src="images/italia.jpg" aling ="center"    /> 
+          </td> 
+      <td> <input type ="text" name="equipo1_local" value"" style="width:30px;"/>  -
+           <input type ="text" name="equipo2_visitante" value"" style="width:30px;" />
+      </td>
+      <td>
+        <select name ="equipo2_local">
+              <option value =""></option>
+              <option value ="mx">Uruguay</option>
+              <option value ="br">Brasil</option>                  
+            </select>
+
+        <img width="80%" height="80%" src="images/uruguay.jpg" align="center"/> 
+        Uruguay
+      </td> 
+      </tr>
+
+        <tr>
+          <td aling ="right" colspan ="6">
+            <input type ="submit" name="Guardar" value ="guardar" />
+          </td>
+        </tr>
+
+
+  </table>
+</form>
+</html>

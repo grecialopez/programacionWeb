@@ -1,0 +1,101 @@
+<html>
+   <head> 
+<link rel ="stylesheet" type="text/css" href="css/estilos.css">
+	<title> Registro de Equipos </title>
+   </head>
+   <body>
+        <table align="center" class ="menu">
+ <tr>
+  <th><a href ="ListaEquipos.html"> Lista de Equipos </a></th>
+  <th><a href ="Calendario_Resultados.html">Calendario y Resultados</a> </th>
+  <th><a href ="tablaGrupos.html">Tabla de grupos</a> </th>
+ </tr>
+  <tr>
+   <th><a href ="Goleo_Individual.html">Goleo individual </a> </th>
+   <th><a href ="Goleo_Equipos.html">Goleo por equipos </a></th>
+   <th><a href ="Estadisticas.html">Estad&iacute;sticas de grupos </a></th>
+   </tr>
+  <tr>
+   <th colospan="3"><a href ="Noticias.html"> Noticias </a> </th>
+  </tr>
+  
+  <tr>
+   <th colospan="3"><a href ="capturaResultados.html"> Captura de Resultados</a> </th>
+  </tr>
+  <tr>
+   <th colospan="3"><a href ="registro_Equipos.html"> Registro de Equipos</a> </th>
+  </tr>
+  <tr>
+   <th colospan="3"><a href ="registro_Jugadores.html"> Registro de Jugadores</a> </th>
+  </tr>
+</table>
+<div align="center">
+   <img width="30%" height="30%" src="images/brasil.png" />
+</div>
+
+<div align ="center">
+<form method ="POST" action="">
+<label for="id_nombre"> Nombre</label>
+<input type ="text" id="id_nombre" name="id_nombre" required>
+<br>
+<br>
+<label for="id_apellido_Paterno">Apellido Paterno</label>
+<input type ="text" id="id_apellido_Paterno" name="id_apellido_Paterno" required>
+<br>
+<br>
+<label for="id_apellido_Materno">Apellido Materno</label>
+<input type ="text" id="id_apellido_Materno" name="id_apellido_Materno" required>
+<br>
+<br>
+    <label for="id_numero">N&uacute;mero</label>
+    <input type ="text" id="id_numero" name="id_numero" required>
+<br>
+<br>
+    <label for="id_pisicion">Posici&oacute;n</label>
+    <input type ="text" id="id_posicion" name="id_posicion" required>
+<br>
+<br>
+<label for="id_equipo">Equipo</label>
+<select name ="id_Continente">
+              <option value =""></option>
+              <option value ="af">&Aacute;frica</option>
+              <option value ="am">Am&eacute;rica</option> 
+              <option value ="eu">Europa</option>
+              <option value ="au">Australia</option> 
+              <option value ="oc">Oceania</option>    
+              <option value ="an">Ant&aacute;rtica</option>   
+              <option value ="as">Asia</option>         
+            </select>
+<br>
+<br>
+<label for="id_edad">Edad</label>
+ <input type ="text" id="id_edad" name="id_edad" required>
+            <br>
+            <br>
+<label for="id_estatura">Estatura</label>
+ <input type ="text" id="id_estatura" name="id_estatura" required>
+<br>
+<br>
+<label for="id_peso">Peso</label>
+ <input type ="text" id="id_pesp" name="id_peso" required>
+<br>
+<br>
+<label for="id_genero">G&eacute;nero</label>
+<select name ="id_genero">
+              <option value =""></option>
+              <option value ="f">Femenino</option>
+              <option value ="m">Masculino</option>     
+            </select>
+            <br>
+            <br>
+<label for="id_foto">Foto</label>
+<input type ="file" id="id_foto" name="id_foto">
+<br>
+<br>
+<input type ="submit" value="Guardar">
+<br>
+
+</form>
+</div>
+</body>
+</html>

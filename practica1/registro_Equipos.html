@@ -1,0 +1,83 @@
+<html>
+   <head> 
+<link rel ="stylesheet" type="text/css" href="css/estilos.css">
+	<title> Registro de Equipos </title>
+   </head>
+   <body>
+        <table align="center" class ="menu">
+ <tr>
+  <th><a href ="ListaEquipos.html"> Lista de Equipos </a></th>
+  <th><a href ="Calendario_Resultados.html">Calendario y Resultados</a> </th>
+  <th><a href ="tablaGrupos.html">Tabla de grupos</a> </th>
+ </tr>
+  <tr>
+   <th><a href ="Goleo_Individual.html">Goleo individual </a> </th>
+   <th><a href ="Goleo_Equipos.html">Goleo por equipos </a></th>
+   <th><a href ="Estadisticas.html">Estad&iacute;sticas de grupos </a></th>
+   </tr>
+  <tr>
+   <th colospan="3"><a href ="Noticias.html"> Noticias </a> </th>
+  </tr>
+  
+  <tr>
+   <th colospan="3"><a href ="capturaResultados.html"> Captura de Resultados</a> </th>
+  </tr>
+  <tr>
+   <th colospan="3"><a href ="registro_Equipos.html"> Registro de Equipos</a> </th>
+  </tr>
+  <tr>
+   <th colospan="3"><a href ="registro_Jugadores.html"> Registro de Jugadores</a> </th>
+  </tr>
+</table>
+<div align="center">
+   <img width="30%" height="30%" src="images/brasil.png" />
+</div>
+
+<div align ="center">
+<form method ="POST" action="">
+<label for="id_nombre"> Nombre</label>
+<input type ="text" id="id_nombre" name="id_nombre" required>
+<br>
+<br>
+<br>
+<label for="id_continente">Continentes</label>
+<select name ="id_Continente">
+              <option value =""></option>
+              <option value ="af">&Aacute;frica</option>
+              <option value ="am">Am&eacute;rica</option> 
+              <option value ="eu">Europa</option>
+              <option value ="au">Australia</option> 
+              <option value ="oc">Oceania</option>    
+              <option value ="an">Ant&aacute;rtica</option>   
+              <option value ="as">Asia</option>         
+            </select>
+<br>
+<br>
+<label for="id_pais">Pa&iacute;s</label>
+<select name ="id_pais">
+              <option value =""></option>
+              <option value ="me">M&eacute;xico</option>
+              <option value ="chi">Chile</option> 
+              <option value ="ho">Holanda</option>
+              <option value ="ca">Camer&uacute;n</option> 
+              <option value ="cro">Croacia</option>    
+              <option value ="co">Colombia</option>   
+              <option value ="ur">Uruguay</option>         
+            </select>
+            <br>
+            <br>
+<label for="id_escudo">Escudo</label>
+<input type ="file" id="id_foto" name="id_escudo">
+<br>
+<br>
+<label for="id_uniforme">Uniforme</label>
+<input type ="file" id="id_foto" name="id_uniforme">
+<br>
+<br>
+<input type ="submit" value="Guardar">
+<br>
+
+</form>
+</div>
+</body>
+</html>
