@@ -1,0 +1,13 @@
+body{
+background-image: url("../images/fondo.jpg");
+background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+
+
+.menu {
+border:1px solid #000000;
+background-color:#F3F781;
+}
+

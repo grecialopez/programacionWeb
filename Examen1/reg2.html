@@ -1,0 +1,88 @@
+<html>
+   <head> 
+<link rel ="stylesheet" type="text/css" href="css/estilos.css">
+	<title> Registro dos</title>
+   </head>
+   <body>
+       
+<div align ="left">
+	<caption><h1>REGISTRO DE ADMISI&Oacute;N</h1</caption>
+    <caption><h2> Campos con * son requeridos</h2></caption>
+    <caption><h3> Datos Personales</h3></caption>
+    
+</div>
+   <form name="reg2" method ="post" action ="">
+   	<label for="id_nombre">Nombre *</label>
+<input type ="text" id="id_nombre" name="id_nombre" required>
+<br>
+	<label for="id_apellidoP">Apellido Paterno *</label>
+<input type ="text" id="id_apellidoM" name="id_apellidoP" required>
+<br>
+  <label for="id_apellidoM">Apellido Materno *</label>
+  <input type ="text" id="id_apellidoM" name="id_apellidoM">
+<br>
+  <label for="id_fecha">fecha de nacimiento *</label>
+  <input type ="text" id="id_fecha" name="fecha" required>
+<br>
+<label for="id_sexo">Sexo</label>
+<select name ="sexo">
+              <option value =""></option>
+              <option value ="m">Masculino</option>
+              <option value ="f">Femenino</option> 
+            </select>
+<br>
+	<label for="id_fecha">fecha de nacimiento *</label>
+	<input type ="text" id="id_fecha" name="id_fecha" required>
+
+  <br>
+  <label for="id_curp">curp*</label>
+  <input type ="text" id="id_curp" name="id_curp" required>
+<br>
+<br>
+<label for="id_estado">Estado civil</label>
+<select name ="estado">
+              <option value =""></option>
+              <option value ="a">casado</option>
+              <option value ="b">soltero</option> 
+               <option value ="c">divorciado</option>
+            </select>
+<br>
+<label for="id_datos">Datos de contacto</label>
+<br>
+<label for="id_calle">calle *</label>
+   <input type ="text" id="id_calle" name="id_calle" required>
+   <br>
+<label for="id_num">Numero *</label>
+   <input type ="text" id="id_num" name="id_num" required>
+<br>
+<label for="id_col">colonia*</label>
+   <input type ="text" id="id_col" name="id_col" required>
+<br>
+<label for="id_loc">localidad *</label>
+   <input type ="text" id="id_loc" name="id_loc" required>
+<br>
+<br>
+<label for="id_cod">c&oacute;digo postal *</label>
+   <input type ="text" id="id_cod" name="id_cod" required>
+<br>
+<br>
+<label for="id_telefono">Tel&eacute;fono *</label>
+   <input type ="text" id="id_telefono" name="id_telefono" required>
+<br>
+<br>
+<label for="id_correoe">correo electronico *</label>
+   <input type ="text" id="correoe" name="correoe" required>
+<br>
+
+</form>
+</div>
+<div align ="center">
+   <label for="id_reg1">Registro uno</label>
+ <form name="reg2" method ="post" action ="reg1.html">
+   <input type ="submit" value="registro uno">
+
+</form>
+</div>
+
+</body>
+</html>
