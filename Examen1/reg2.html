@@ -12,6 +12,7 @@
     
 </div>
    <form name="reg2" method ="post" action ="">
+    <div>
    	<label for="id_nombre">Nombre *</label>
 <input type ="text" id="id_nombre" name="id_nombre" required>
 <br>
@@ -47,6 +48,8 @@
                <option value ="c">divorciado</option>
             </select>
 <br>
+</div>
+<div>
 <label for="id_datos">Datos de contacto</label>
 <br>
 <label for="id_calle">calle *</label>
@@ -74,6 +77,79 @@
    <input type ="text" id="correoe" name="correoe" required>
 <br>
 
+      <label for="id_lugar">Lugar de nacimiento *</label>
+      <br>
+      <label for="id_pais">Pais</label>
+<select name ="pais">
+              <option value =""></option>
+              <option value ="me">M&eacute;xico</option>
+              <option value ="bra">Brasil</option> 
+               <option value ="EUA">Estados Unidos</option>
+
+            </select>
+<br>
+<label for="id_estado">Estado *</label>
+<select name ="estado">
+              <option value =""></option>
+              <option value ="gto">Gto</option>
+              <option value ="m">Monterrey</option> 
+               <option value ="z">Zacatecas</option>
+            </select>
+<br>
+<label for="id_municipio">Municipio *</label>
+<select name ="municipio">
+              <option value =""></option>
+              <option value ="ce">celaya</option>
+              <option value ="ac">Ac&acute;mbaro</option> 
+               <option value ="MO">Morelos</option>
+            </select>
+<br>
+ <label for="id_especialidad">Especialidad a cursar *</label>
+<select name ="especialidad">
+              <option value =""></option>
+              <option value ="si">Sistemas</option>
+              <option value ="qui">Quimica</option> 
+               <option value ="in">Inform&aacute;tica</option>
+
+            </select>
+
+<br>
+ <label for="id_estudios">Lugar donde realizo estudios</label>
+  <label for="id_estado">Estado *</label>
+<select name ="estudios">
+              <option value =""></option>
+              <option value ="ce">celaya</option>
+              <option value ="ac">Ac&acute;mbaro</option> 
+               <option value ="MO">Morelos</option>
+
+            </select>
+<br>
+<label for="id_municipio2">Municipio *</label>
+<select name ="municipio2">
+              <option value =""></option>
+              <option value ="ce2">celaya</option>
+              <option value ="ac2">Ac&acute;mbaro</option> 
+               <option value ="MO2">Morelos</option>
+            </select>
+<br>
+ <br>
+<label for="id_escuela">Escuela procedencia *</label>
+<select name ="escuela">
+              <option value =""></option>
+              <option value ="cb">CBTIS</option>
+              <option value ="CO">CONALEP</option> 
+            </select>
+<br>
+<label for="id_promedio">Promedio bachillerato*</label>
+   <input type ="text" id="id_promedio" name="id_promedio" required>
+<br>
+ <br>
+<label for="id_financiamiento">Tipo de financiamiento*</label>
+<select name ="financiamiento">
+              <option value =""></option>
+              <option value ="bec">Beca</option>
+              <option value ="tra">Trabajo</option> 
+            </select>
 </form>
 </div>
 <div align ="center">
@@ -83,6 +159,13 @@
 
 </form>
 </div>
+<div align ="center">
+  <label for="id_menu" >Men&uacute;</label>
+ <form  method ="post" action ="index.html">
+   <input type ="submit" value="Men&uacute;">
+</form>
+</div>
+
 
 </body>
 </html>
