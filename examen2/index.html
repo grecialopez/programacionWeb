@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="JS/jquery.min.js"></script>
+
+  <script>$(document).ready(
+    function(){
+        
+        
+        $('#elemento1').hide();
+        $('#elemento2').hide();
+        $('#jugador').hide();
+        $('#entrenador').hide();
+
+          $('#boton').click(
+            function () {
+              $('#elemento1').show('slow');
+              
+            }
+
+          );
+            $('#botonEntrenador').click(
+            function () {
+              $('#jugador').hide('slow');
+              $('#entrenador').show('slow');
+              
+            }
+
+          );
+            $('#botonJugador').click(
+            function () {
+              $('#entrenador').hide('slow');
+              $('#jugador').show('slow');
+             
+            }
+
+          );
+
+    }
+
+  );
+  
+  </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen 2</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel ="stylesheet" type="text/css" href="css2/estilos.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class ="row">
+        <div class ="col-md-12">
+          <div class ="col-md-6">
+            <h4>Project Name</h4>
+          </div>
+            <div class ="col-md-6">
+            <form class="form-inline" role="form" class ="center">
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputEmail2">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+            </div>
+             <div class="form-group">
+              <label class="sr-only" for="exampleInputPassword2">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+            </div>
+             <button type="submit" class="btn btn-default">Sign in</button>
+          </form>
+          </nav>
+        </div>
+</div>
+</div>
+  </head>
+  <body > 
+    <div class_"container">
+      <div class ="row">
+        <div class ="col-md-12">
+          <div class ="col-md-6">
+         <h1>Ex&aacute;men 2</h1>
+         </div>
+          <div class ="col-md-6">
+         <h1>5 Julio 14</h1>
+          </div>
+       </div>
+    </div>
+ <br/>
+<br/>
+ <br/>
+        <div class ="row">
+        <div class ="col-md-12">
+          <div class ="col-md-6">
+        <button type="button" class="btn btn-primary btn-lg" id="boton">Ver formularios</button>
+         </div>
+          <div class ="col-md-6">
+        
+          </div>
+       </div>
+    </div>
+    </div>
+ <br/>
+<br/>
+ <br/>
+  <br/>
+   <br/>
+
+   <div class ="container" id="elemento1">
+    <div class ="row">
+        <div class ="col-md-12">
+          <div class ="col-md-4">
+            <h4>Equipo</h4>
+                 <form role="form">
+                          <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Enter nombre">
+                          </div>
+                            <div class="form-group">
+                            <label for="equipo">Equipo</label>
+                            <input type="text" class="form-control" id="equipo" placeholder="Enter equipo">
+                          </div>
+                           <div class="form-group">
+                            <label for="pais">Pa&iacute;s</label>
+                            <input type="text" class="form-control" id="pais" placeholder="Enter pais">
+                          </div>  
+                           <div class="form-group">
+                           <label for="escudo">Seleccione Escudo</label>
+                           <input type="file" id="escudo">
+                          </div>
+                          
+                 </div>
+
+          <div class ="col-md-4">
+          <h4>Integrante</h4>
+          <button type="button" class="btn btn-primary" id="botonEntrenador">Entrenador</button>
+          <button type="button" class="btn btn-primary" id="botonJugador">Jugador</button>
+          </div>
+   
+    <div class ="container">
+          <div class ="col-md-4">
+
+              <div class "container" id ="entrenador">
+                          <div class="form-group">
+                           <label for="nombre">Nombre</label>
+                           <input type="text" class="form-control" id="nombre" placeholder="Enter nombre">
+                          </div>
+                          <div class="form-group">
+                            <label for="pais">Pa&iacute;s</label>
+                            <input type="text" class="form-control" id="pais" placeholder="Enter pais">
+                          </div>  
+              </div>
+                           <div class="container" id ="jugador">
+                          <div class="form-group">
+                           <label for="nombre">Nombre</label>
+                           <input type="text" class="form-control" id="nombre" placeholder="Enter nombre">
+                          </div>
+                            <div class="form-group">
+                           <label for="numero">N&uacute;mero</label>
+                           <input type="text" class="form-control" id="nombre" placeholder="Enter numero">
+                          </div>
+                            <div class="form-group">
+                           <label for="posicion">Posici&oacute;n</label>
+                           <input type="text" class="form-control" id="posicion" placeholder="Enter posicion">
+                          </div>
+                        </div> 
+            </div>
+
+              </div>
+          </div>
+        </div>
+  </div>
+
+        
+
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

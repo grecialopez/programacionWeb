@@ -1,15 +1,24 @@
 <html>
+<!doctype html>
  <head>
  	<script src="JS/jquery.min.js"></script>
+
  	<script>$(document).ready(
  		function(){
  				
  				alert($('#elemento1').css ('fontSize'));
+
  				$('#lemento1').css('fontSize','100px'); 
+
  				alert($('#elemento1').css ('fontSize'));
+
  				$('#elemento1').hide('slow');
+
  				$('#elemento1').show('slow');
+
  				$('#elemento1').css({ 'fontSize' : '100px', 'color' : 'green' });
+
+ 				
  				$('#elemento1').click(
  					function  () {
  						$(this).hide('slow');}
@@ -17,7 +26,9 @@
 		
  					$('#boton').click(
 						function () {
-							alert($('#input1').val());
+							v1=parseInt($('#input1').val());
+							v2=parseInt($('#input2').val());
+							Suma(v1,v2);
 							
 						}
 
@@ -25,7 +36,13 @@
 		}
 
 	);
+function Suma(a,b)
+	{
+		alert(a+b);
+	}
+	
  	</script>
+ 	<input type=button value= "Atr&aacute;s" onclick="history.go(-1)">
 
  	<input type ="text" id="input1">+
  	<input type ="text" id="input2">
