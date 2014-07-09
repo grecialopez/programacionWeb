@@ -8,8 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -25,22 +24,16 @@
           <div class="form-group">
             <label class="col-lg-3 control-label">Nombre</label>
             <div class="col-lg-9">
-                <input type="text" class="form-control" name="nombre" id="nombre"  placeholder="nombre"/>
+                <input type="text" class="form-control" name="name" id="name"  placeholder="nombre"/>
             </div>
           </div>
         <div class="form-group">
             <label class="col-lg-3 control-label">Seleccione Portada</label>
             <div class="col-lg-9">
-                <input type="file"  name="portada" id="portada"/>
+                <input type="file"  name="bandera" id="bandera"/>
             </div>
         </div>
-        <div class="form-group">
-            <label class="col-lg-3 control-label">Fecha</label>
-            <div class="col-lg-9">
-                <input type="text" class="form-control" name="fecha" id="fecha"  placeholder="fecha"/>
-            </div>
-        </div>
-         <div class="form-group">
+           <div class="form-group">
             <label class="col-lg-3 control-label">Volumen</label>
             <div class="col-lg-9">
                 <input type="text" class="form-control" name="volumen" id="volumen"  placeholder="volumen"/>
@@ -73,7 +66,7 @@
          <div class="form-group">
             <label class="col-lg-3 control-label">Directorio</label>
             <div class="col-lg-9">
-                <input type="text" class="form-control" name="clave" id="clave"  placeholder="directorio"/>
+                <input type="text" class="form-control" name="directorio" id="directorio"  placeholder="directorio"/>
             </div>
         </div>
           <div class="form-group">
@@ -84,7 +77,21 @@
         </div>
 
       </form>
-
+      <!---fecha---->
+          <form id="datetimepicker" class="form-horizontal">
+              <div class="form-group">
+                  <label class="col-lg-3 control-label">Fecha</label>
+                  <div class="col-lg-4">
+                      <div class="input-group date" id="datetimePicker">
+                          <input type="text" class="form-control" name="meeting" />
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                      </div>
+                      <span class="help-block">MM/DD/YYYY h:m A</span>
+                  </div>
+              </div>
+          </form>
     </div>
    </div>
 </div>
@@ -92,8 +99,137 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="dist/js/jquery.min.js"></script>
     <script src="dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="dist/js/moment.js"></script>
+        <script type="text/javascript" src="dist/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="dist/js/bootstrap-datetimepicker.es.js"></script>
     <script src="dist/js/bootstrapValidator.min.js"></script>
-  </body>
+     
+<script >
+$(document).ready(function() {
+    $('#form1').bootstrapValidator({
+        live: 'enabled',
+        message: 'This value is not valid',
+        submitButtons: 'button[type="submit"]',
+        submitHandler: null,
+        trigger: null,
+        fields: { name: {
+                message: 'The username is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The username is required and cannot be empty'
+                    },
+                    stringLength: {
+                        min: 10,
+                        max: 30,
+                        message: 'The username must be more than 6 and less than 30 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_]+$/,
+                        message: 'The username can only consist of alphabetical, number and underscore'
+                    }
+                }
+               },
+              bandera:{
+                validators: {
+                    file: {
+                        extension:'jpeg,png',
+                        type: 'image/jpeg,image/png',
+                        maxSize: 2048 * 1024,   // 2 MB
+                        message: 'The selected file is not valid'
+                    }
+                }
+            },
+            volumen: {
+                validators: {
+                    integer: {
+                        message: 'The value is not an integer'
+                    }
+                }
+            },
+            titulo: {
+                message: 'The tittle is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The tittle is required and cannot be empty'
+                    }
+                  }
+            },
+             subtitulo: {
+                message: 'The subtittle is not valid',
+                validators: {
+                    notEmpty: {
+                        message: 'The subtittle is required and cannot be empty'
+                    }
+                  }
+            },
+            numero: {
+                validators: {
+                    integer: {
+                        message: 'The value is not an integer'
+                    }
+                }
+            },
+            clave: {
+                validators: {
+                    integer: {
+                        message: 'The value is not an integer'
+                    }
+                }
+            },
+            directorio: {
+                validators: {
+                    notEmpty: {
+                        message: 'The directory is required'
+                    }
+                }
+            },
+
+               editorial: {
+                validators: {
+                    notEmpty: {
+                        message: 'La editorial es requerida'
+                    }
+                }
+            },
+        } 
+       
+    });
+           $(function (){
+                $('#datetimepicker').datetimepicker();
+
+                $('#datetimepicker').bootstrapValidator({
+                    feedbackIcons: {
+                        valid: 'glyphicon glyphicon-ok',
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
+                    },
+                    fields: {
+                        meeting: {
+                            validators: {
+                                date: {
+                                    format: 'MM/DD/YYYY h:m A',
+                                    message: 'The value is not a valid date'
+                                }
+                            }
+                        }
+                    }
+                });
+
+                    $('#datetimePicker')
+                            .on('dp.change dp.show', function(e) {
+                                // Validate the date when user change it
+                                $('#meetingForm')
+                                    // Get the bootstrapValidator instance
+                                    .data('bootstrapValidator')
+                                    // Mark the field as not validated, so it'll be re-validated when the user change date
+                                    .updateStatus('meeting', 'NOT_VALIDATED', null)
+                                    // Validate the field
+                                    .validateField('meeting');
+                            });
+});
+});
+</script>
+</body>
 </html>
