@@ -1,4 +1,11 @@
 <?php 
+      include ('../../libs/adodb5/adodb-pager.inc.php');
+      include ('../../libs/adodb5/adodb.inc.php');
+      include ('../../models/Conexion.php');
+      include ('../../models/Modelo.php');
+      include ('../../models/Ciudad.php');
+      include ('../../controllers/CiudadController.php');
+      include ('../../libs/Er.php');
   session_start();
   include ('../layouts/header.php');
 ?>
@@ -11,9 +18,9 @@
           <div class ="col-md-12">
               <form id ="form1">
                 <div class="form-group">
-                    <label for="nombre" class="col-sm-2 control-label">Nombre de la ciudad</label>
+                    <label for="Nombre" class="col-sm-2 control-label">Nombre de la ciudad</label>
                     <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter nombre">
+                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Enter nombre">
                     </div> 
                 </div>
               </form>

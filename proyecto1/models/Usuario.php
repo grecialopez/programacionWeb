@@ -30,7 +30,7 @@ class Usuario extends Modelo{
     
     
     public function get_email(){
-        return $this->sube;
+        return $this->email;
     } 
 
     public function set_email($valor){

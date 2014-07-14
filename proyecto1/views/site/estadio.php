@@ -1,4 +1,11 @@
 <?php 
+      include ('../../libs/adodb5/adodb-pager.inc.php');
+      include ('../../libs/adodb5/adodb.inc.php');
+      include ('../../models/Conexion.php');
+      include ('../../models/Modelo.php');
+      include ('../../models/Estadio.php');
+      include ('../../controllers/EstadioController.php');
+      include ('../../libs/Er.php');
   session_start();
   include ('../layouts/header.php');
 ?>
@@ -11,7 +18,7 @@
                   <div class="form-group">
                     <label for="estadio" class="col-sm-2 control-label">Nombre de Estadio</label>
                     <div class="col-sm-10">
-                    <input type="text" class="form-control" id="estadio" name="estadio" placeholder="Enter nombre">
+                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Enter nombre">
                     </div>         
                     <label for="idciudad" class="col-sm-2 control-label">Ciudad</label>
                       <div class ="col-sm-10">

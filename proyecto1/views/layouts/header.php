@@ -99,14 +99,14 @@
                 <button type="button" class="btn btn-warning" onclick=" location.href='../site/estadio.php'" >Estadio</button>
                 <button type="button" class="btn btn-primary" onclick=" location.href='../site/pais.php'">Pais</button>
                 <button type="button" class="btn btn-warning" onclick=" location.href='../site/posicion.php'" >Posici&oacute;n</button>
-                <button type="button" class="btn btn-primary">Premios</button>
-                <button type="button" class="btn btn-warning">Entradas</button>
+                <button type="button" class="btn btn-primary" onclick=" location.href='../site/equipo.php'">Equipo</button>
+                <button type="button" class="btn btn-warning" onclick=" location.href='../site/integrante.php'">Integrante</button>
                 <button type="button" class="btn btn-primary">Destino</button>
                 <button type="button" class="btn btn-warning">Organizaci&oacute;n</button>
                 </div>
                 </div>
                 </div> 
-        <!--<p> <a class="btn btn-success various" data-fancybox-type="iframe" href="ciudad.php">Ciudades</a></p>-->
+       <!--<a class="btn btn-success various" data-fancybox-type="iframe" href="ciudad.php">Ciudades</a></p>-->
 
           <div class ="row">
             <div class ="col-md-12">            
