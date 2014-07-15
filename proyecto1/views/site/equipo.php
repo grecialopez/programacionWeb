@@ -12,9 +12,9 @@
 
 
   if (isset($_POST['nombre'])){
-    echo "<pre>";
-    print_r($_POST);
-    echo"</pre>";
+   
+    $equipoC = new EquipoController();
+    $equipoC->insertaEquipo($_POST);
 
   }
 ?>
@@ -50,16 +50,4 @@
       </div>
     </div>
   </body>
-
-
-
-
-
-
-
-
-
-
-
-
 <?php include ('../layouts/footer.php'); ?>

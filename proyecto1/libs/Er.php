@@ -19,7 +19,7 @@ class Er {
 	}
 	//3. verificar nombre
 	public function valida_nombre($nombre){
-		return preg_match("#^ [a-z]  [\da-z_] {6,22} [a-z\d] \$#i", $nombre);
+		return preg_match('#^ [a-z]  [\da-z_] {6,22} [a-z\d] \$#i', $nombre);
 
 	}
 	//4.- verificar fecha
@@ -57,17 +57,8 @@ class Er {
 			return preg_replace_callback($insultos, "***", $string);
 				}
 
-
-			//7.- Funcion que Convierte fecha de normal a mysql
-		public function cambiar_fecha_normal_mysql($fecha)
-		{
-		    $cad = preg_split(“/ /”,$fecha);
-		    $sub_cad = preg_split(“/-/”,$cad[0]);
-		    $cad_hora = preg_split(“/:/”,$cad[1]);
-		    $hora_formateada = $cad[0].”:”.$cad_hora[1].”:”.$cad_hora[2];
-		    $fecha_formateada = $sub_cad[2].”-”.$sub_cad[1].”-”.$sub_cad[0].” “.$hora_formateada;
-		    return $fecha_formateada;
-		}
+			
+	
 		//8.- validar un entero
 		public function validar_entero($entero){
 			$exp_reg = '^(?:\+|-)?\d+$'; 
@@ -80,7 +71,7 @@ class Er {
 		}
 		//9.- validar fecha
 
-		public function validar_fecha($fecha){
+		public function valida_fecha($fecha){
 			$exp_reg = '^\d{1,2}\/\d{1,2}\/\d{2,4}$'; 
 		if (preg_match($exp_reg, $valor)) {
 		     return true;

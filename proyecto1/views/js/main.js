@@ -156,17 +156,17 @@ $('#form5').bootstrapValidator({
                         message: 'The name can only consist of alphabetical, number and underscore'
                     }
                 }
-               },
-           escudo:{
+               }
+           /*escudo:{
                 validators: {
                     file: {
-                        extension:'jpeg,png',
-                        type: 'image/jpeg,image/png',
+                        extension:'jpg,png',
+                        type: 'image/jpg,image/png',
                         maxSize: 2048 * 1024,   // 2 MB
                         message: 'The selected file is not valid'
                     }
                 }
-            }
+            }*/
         } 
      });
     

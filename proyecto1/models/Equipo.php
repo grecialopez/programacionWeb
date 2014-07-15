@@ -17,7 +17,7 @@ class Equipo extends Modelo{
     private $escudo;
     private $idpais; 
     
-    function Equipo(){
+    function Equipo(){ // constructor y hace una llamada a MODELO, inicializar el objeto
         parent::Modelo();
     }
     
@@ -37,42 +37,22 @@ class Equipo extends Modelo{
     public function set_nombre($valor){
 
         $er = new Er();
-        
+       
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
         }
-
-        $rs = $this->consulta_sql("select * from equipo where nombre = '$valor'");
-        $rows = $rs->GetArray();
+         $this->nombre = trim($valor);
         
-        if(count($rows) > 0){
-            $this->errores[] = "Este nombre (".$valor.") ya esta registrado"; 
-        }else{
-            $this->nombre = trim($valor);
-        }
     }
 
    
 public function get_idpais(){
-        return $this->nombre;
+        return $this->idpais;
     } 
 
-    public function set_idpais($valor){
-
-        $er = new Er();
+public function set_idpais($valor){
+     return $this->idpais = trim($valor);
         
-        if ( !$er->valida_nombre($valor) ){
-            $this->errores[] = "Este id (".$valor.") no es valido";
-        }
-
-        $rs = $this->consulta_sql("select * from equipo where idpais = '$valor'");
-        $rows = $rs->GetArray();
-        
-        if(count($rows) > 0){
-            $this->errores[] = "Este id (".$valor.") ya esta registrado"; 
-        }else{
-            $this->idpais = trim($valor);
-        }
     }
     
    public function get_escudo(){
@@ -80,21 +60,9 @@ public function get_idpais(){
     } 
 
     public function set_escudo($valor){
-
-        $er = new Er();
-        
-        if ( !$er->valida_escudo($valor) ){
-            $this->errores[] = "Este id (".$valor.") no es valido";
-        }
-
-        $rs = $this->consulta_sql("select * from equipo where escudo = '$valor'");
-        $rows = $rs->GetArray();
-        
-        if(count($rows) > 0){
-            $this->errores[] = "Este escudo(".$valor.") ya esta registrado"; 
-        }else{
+      
             $this->escudo = trim($valor);
-        }
+        
     } 
     
 }

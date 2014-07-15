@@ -30,7 +30,7 @@ class Estadio extends Modelo{
     
     
     public function get_Nombre(){
-        return $this->Nombre;
+        return $this->nombre;
     } 
 
     public function set_Nombre($valor){
