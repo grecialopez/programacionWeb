@@ -55,11 +55,11 @@ class Articulo extends Modelo{
     } 
 
     public function set_Nombre($valor){
-      /* $er = new Er();
+      $er = new Er();
        
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
-        }*/
+        }
          $this->nombre = trim($valor);
     }
 
@@ -120,7 +120,7 @@ public function get_introduccion(){
 
     public function set_archivo_pdf($valor){
       
-            $this->archivo_pdf= trim($valor);        
+            $this->archivo_pdf= trim($valor['name']);        
     } 
 
     public function get_id_status(){

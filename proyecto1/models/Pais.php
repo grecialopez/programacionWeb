@@ -1,23 +1,23 @@
 <?php
 
-class Equipo extends Modelo{
-    public $nombre_tabla = 'equipo';
-    public $pk = 'idequipo';
+class Pais extends Modelo{
+    public $nombre_tabla = 'pais';
+    public $pk = 'idpais';
     
     
     public $atributos = array(
         'nombre'=>array(),
-        'idpais'=>array(),
-        'escudo'=>array(),
+        'bandera'=>array(),
+        'idcontinente'=>array(),
     );
     
     public $errores = array( );
     
     private $nombre;
-    private $escudo;
-    private $idpais; 
+    private $bandera;
+    private $idcontinente; 
     
-    function Equipo(){ // constructor y hace una llamada a MODELO, inicializar el objeto
+    function Pais(){ // constructor y hace una llamada a MODELO, inicializar el objeto
         parent::Modelo();
     }
     
@@ -36,7 +36,7 @@ class Equipo extends Modelo{
 
     public function set_nombre($valor){
 
-       $er = new Er();
+     $er = new Er();
        
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
@@ -46,22 +46,22 @@ class Equipo extends Modelo{
     }
 
    
-public function get_idpais(){
-        return $this->idpais;
+public function get_bandera(){
+        return $this->bandera;
     } 
 
-public function set_idpais($valor){
-     return $this->idpais = trim($valor);
+public function set_bandera($valor){
+    return $this->bandera = trim($valor['name']);
         
     }
     
-   public function get_escudo(){
-        return $this->escudo;
+   public function get_idcontinente(){
+        return $this->idcontinente;
     } 
 
-    public function set_escudo($valor){
+    public function set_idcontinente($valor){
       
-            $this->escudo = trim($valor['name']);
+            $this->idcontinente = trim($valor);
         
     } 
     

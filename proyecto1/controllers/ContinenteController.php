@@ -1,5 +1,5 @@
 <?php
-	class CiudadController extends Equipo{
+	class CiudadController{
 		
 		public $muestra_errores = false;
 		function __construct(){

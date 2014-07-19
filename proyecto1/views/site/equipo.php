@@ -10,12 +10,16 @@
   session_start();
   include ('../layouts/header.php');
 
+  echo "<pre>datos:";
+  print_r($_POST);
+  print_r($_FILES);
+  echo"</pre>";
 
   if (isset($_POST['nombre'])){
    
     $equipoC = new EquipoController();
-    $equipoC->insertaEquipo($_POST);
-
+    $equipoC->insertaEquipo($_POST,$_FILES);
+    echo  $equipoC->alertas();
   }
 ?>
   <body>    
@@ -23,7 +27,7 @@
         <h1>EQUIPO</h1>
         <div class ="row">
           <div class ="col-md-12">
-              <form id ="form5"  action="" method="POST">
+              <form id ="form5"  action="" method="POST" enctype="multipart/form-data">
                  
              <div class="form-group">
                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>

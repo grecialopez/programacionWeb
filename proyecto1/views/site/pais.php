@@ -8,6 +8,16 @@
       include ('../../libs/Er.php');
   session_start();
   include ('../layouts/header.php');
+   echo "<pre>datos:";
+
+  print_r($_POST);
+  print_r($_FILES);
+  echo"</pre>";
+   if (isset($_POST['nombre'])){
+    $paisC = new PaisController();
+    $paisC->insertaPais($_POST,$_FILES);
+     echo  $paisC->alertas();
+}
 ?>
   <body>    
       <div class ="container"> 
@@ -15,7 +25,7 @@
 
         <div class ="row">
           <div class ="col-md-12">
-                      <form  id="form3">
+                      <form  id="form3" action="" method="POST" enctype="multipart/form-data">
                       <div class="form-group">
                         <label for="nombre">Nombre del Pa&iacute;s</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter nombre">
@@ -28,17 +38,13 @@
                        <label for="idcontinente">Continente</label>
                       <div >
                        <select class="form-control" id="idcontinente">
-                           <option>Am&eacute;rica</option>
-                            <option>Auropa</option>
-                            <option>Asia</option>
-                            <option>Australlia</option>
-                            <option>Ocean&iacute;a</option>
-                            <option>Ant&aacute;rtica</option>
+                           <option>1</option>
+                            <option>2</option>
+                            
                     </select>
-                   </div>                        
+                   </div>   
+                    <button type="submit" class="btn btn-default navbar-btn">ENVIAR</button>                     
                     </form>
-
-
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <?php
 
 class Integrante extends Modelo{
-    public $nombre_tabla = 'Integrante';
+    public $nombre_tabla = 'integrante';
     public $pk = 'idintegrante';
     
     
@@ -13,9 +13,6 @@ class Integrante extends Modelo{
         'foto'=>array(),
         'Edad'=>array(),
         'idequipo'=>array(),
-
-
-
     );
     
     public $errores = array( );
@@ -26,7 +23,7 @@ class Integrante extends Modelo{
     private $estatura;
     private $foto;
     private $Edad;
-    
+    private $idequipo;
     function Integrante(){
         parent::Modelo();
     }
@@ -46,7 +43,7 @@ class Integrante extends Modelo{
 
     public function set_nombre($valor){
 
-        $er = new Er();
+       /* $er = new Er();
         
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
@@ -57,9 +54,9 @@ class Integrante extends Modelo{
         
         if(count($rows) > 0){
             $this->errores[] = "Este nombre (".$valor.") ya esta registrado"; 
-        }else{
+        }else{*/
             $this->nombre = trim($valor);
-        }
+       // }
     }
 
     public function get_apellido(){
@@ -68,7 +65,7 @@ class Integrante extends Modelo{
     }
      public function set_apellido($valor){
 
-        $er = new Er();
+       /* $er = new Er();
         
         if ( !$er->valida_apellido($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
@@ -76,45 +73,50 @@ class Integrante extends Modelo{
 
         $rs = $this->consulta_sql("select * from integrante where apellido = '$valor'");
         $rows = $rs->GetArray();
-        
+        */
+        $this->apellido = trim($valor);
        }
 
     public function get_peso(){
-        return $this->baja;
+        return $this->peso;
     }
     
     public function set_peso($valor){
-        $this->peso = trim( md5($valor) );
-    }
+         $this->peso= trim($valor);        
+    } 
+    
       public function get_estatura(){
-        return $this->baja;
+        return $this->estatura;
     }
     
     public function set_estatura($valor){
-        $this->estatura = trim( md5($valor) );
-    }
+        $this->estatura = trim($valor);        
+    } 
+    
 
   public function get_foto(){
-        return $this->baja;
+        return $this->foto;
     }
     
     public function set_foto($valor){
-        $this->foto = trim( md5($valor) );
-    }
+        $this->foto= trim($valor['name']);        
+    } 
+    
 
       public function get_Edad(){
-        return $this->baja;
+        return $this->Edad;
     }
     
     public function set_Edad($valor){
-        $this->Edad = trim( md5($valor) );
-    }
+        $this->Edad = trim($valor);        
+    } 
+    
   public function get_idequipo(){
-        return $this->baja;
+        return $this->idequipo;
     }
     
     public function set_idequipo($valor){
-        $this->idequipo= trim( md5($valor) );
+         $this->idequipo= trim($valor);
     }
 
     

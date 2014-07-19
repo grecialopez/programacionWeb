@@ -6,24 +6,36 @@
       include ('../../models/Revista.php');
       include ('../../controllers/RevistaController.php');
       include ('../../libs/Er.php');
+
   session_start();
   include ('../layouts/header.php');
 
-  if (isset($_POST['nombre'])){
-    $RevistaC = new RevistaController();
-    $RevistaC->insertaRevista($_POST);
+  echo "<pre>datos:";
+  print_r($_POST);
+  print_r($_FILES);
+  echo"</pre>";
+
+$RevistaC = new RevistaController();
+if (isset($_POST['nombre'])){    
+    $RevistaC->insertaRevista($_POST,$_FILES);
+    echo  $RevistaC->alertas();
   }
-?>
-  <body>    
-      <div class ="container">
-        <h1>REVISTA</h1>
+
+
+?> 
+
+<body> e
+    
+     <div class ="container">      
+                <h1>REVISTA</h1>    
         <div class ="row">
-          <div class ="col-md-12">
-           <form id ="revista" action="" method="POST">
+          <div class ="col-md-12">                  
+                          
+          <form id ="revista" action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>
                     <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter nombre">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Enter nombre" value"<?php echo $RevistaC->get_Nombre(); ?>">
                     </div> 
                 </div>
                 <div class="form-group">
@@ -96,10 +108,9 @@
                    </div>
               
                    <button type="submit" class="btn btn-default navbar-btn">ENVIAR</button>
-       </form>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-
-  </body>
+ </body>
 <?php include ('../layouts/footer.php'); ?>

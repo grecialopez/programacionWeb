@@ -50,5 +50,8 @@ class Ciudad extends Modelo{
             $this->Nombre = trim($valor);
         }
     }
+  }
+
+?>
 
     

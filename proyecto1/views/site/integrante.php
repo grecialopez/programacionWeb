@@ -5,10 +5,20 @@
       include ('../../models/Conexion.php');
       include ('../../models/Modelo.php');
       include ('../../models/Integrante.php');
-      //include ('../../controllers/IntegranteController.php');
-      //include ('../../libs/Er.php');
+      include ('../../controllers/IntegranteController.php');
+      include ('../../libs/Er.php');
   session_start();
   include ('../layouts/header.php');
+
+  echo "<pre>datos:";
+  print_r($_POST);
+  print_r($_FILES);
+  echo"</pre>";
+  
+if (isset($_POST['nombre'])){
+    $integranteC = new IntegranteController();
+    $integranteC->insertaIntegrante($_POST,$_FILES);
+  }
 ?>
 <body>    
       <div class ="container"> 
@@ -23,7 +33,7 @@
                    </div>  
                    </div>
 
-              <form id ="form6">
+              <form id ="form6" action="" method="POST" enctype="multipart/form-data">
              <div class="form-group">
                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>
                     <div class="col-md-10">
@@ -57,16 +67,28 @@
                         <input type="file" id="foto" name="foto">
                         <p class="help-block">Example block-level help text here.</p>
                       </div>
+                   
+                      
                <div class="form-group">
                     <label for="edad" class="col-sm-2 control-label">Edad</label>
                     <div class="col-md-5">
                     <input type="text" class="form-control" id="Edad" name="Edad" placeholder="Enter edad">
                     </div> 
-            	</div>                  
+                  <div class ="col-md-10">
+                     <label for="idequipo" class="col-md-2 control-label">Equipo</label>
+                       <select class="form-control" id="idequipo">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                            </select>
+                          </div>
+
+                  
+            	</div>  
+                <button type="submit" class="btn btn-default navbar-btn">ENVIAR</button>                     
             </form>
 
             <!--form entrenador-->
-            <form id="form7">
+            <form id="form7" action="" method="POST" enctype="multipart/form-data">
               <div class ="row">
                 <div class ="col-md-12">
             <div class="form-group">
@@ -93,7 +115,8 @@
                             </select>
                           </div>
                   </div>
-                  </div>              
+                  </div>   
+                  <button type="submit" class="btn btn-default navbar-btn">ENVIAR</button>           
         </form>
 
           </div>

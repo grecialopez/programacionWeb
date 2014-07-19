@@ -48,25 +48,26 @@ class Revista extends Modelo{
     
     
     public function get_Nombre(){
-        return $this->Nombre;
+        return $this->nombre;
     } 
 
     public function set_Nombre($valor){
-       /*$er = new Er();
+       $er = new Er();
        
         if ( !$er->valida_nombre($valor) ){
             $this->errores[] = "Este nombre (".$valor.") no es valido";
-        }*/
+        }
          $this->nombre = trim($valor);
     }
 
     public function get_portada(){
         return $this->portada;
+        
     } 
 
 public function set_portada($valor){
-     return $this->portada = trim($valor);
-        
+     return $this->portada = trim($valor['name']);
+       //TAREA:VALIDAR el nombre de la imagen, tipo y tamaño 
     }
     
    public function get_fecha(){

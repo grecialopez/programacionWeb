@@ -9,9 +9,15 @@
   session_start();
   include ('../layouts/header.php');
 
+  echo "<pre>datos:";
+  print_r($_POST);
+  print_r($_FILES);
+  echo"</pre>";
+
   if (isset($_POST['nombre'])){
     $ArticuloC = new ArticuloController();
-    $ArticuloC->insertaArticulo($_POST);
+    $ArticuloC->insertaArticulo($_POST,$_FILES);
+    echo $ArticuloC->alertas();
 
   }
 ?>
@@ -22,7 +28,7 @@
 
         <div class ="row">
           <div class ="col-md-12">
-              <form id ="form1" action="" method="POST">
+              <form id ="form1" action="" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nombre" class="col-sm-2 control-label">Nombre</label>
                     <div class="col-sm-10">
