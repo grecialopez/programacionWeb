@@ -13,8 +13,8 @@ class Conexion {
     
     
     function Conexion(){
-        $this->db = ADONewConnection('mysql');
-        $this->db->debug = true;
+        $this->db = ADONewConnection('mysqli');
+        $this->db->debug = false;
 			       //ip     user      pass    bd
         $this->db->Connect('localhost','fifa_12345','QR63ZuWddbv9LnnR','fifa');
 

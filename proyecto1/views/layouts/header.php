@@ -24,22 +24,21 @@
 
   <body role="document">
  <div class="container">
-    <!-- Fixed navbar -->
+    <!-- Fixed navbar -->    
    <div class "row">
-      <div class _"col-md-12">
+      <div class _"col-md-12">        
              <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
+              <div class="navbar-header">               
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">FIFA.COM</a>
-              </div>
-
+                <a class="navbar-brand" href="<?php echo BASEURL; ?>/views/site/inicio.php">FIFA.COM</a>
+              </div>             
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -48,11 +47,22 @@
                   <li><a href="#">Gobierno</a></li>
                     <li><a href="#">Responsabilidad Social</a></li>
                   </ul>
+                
               
                 </form>
                 <ul class="nav navbar-nav navbar-right">
+                  <?php if( !isset($_SESSION['user']) ) { ?>
                   <li><a><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
-                  <li><a><span class="glyphicon glyphicon-registration-mark"></span></a></li>
+                  <li><a href="<?php echo BASEURL; ?>/views/site/login.php">
+                    <span class="glyphicon glyphicon-log-in"></span>Login</a>
+                  </li>
+                  <?php }else{ ?>
+
+                  <li><a href="<?php echo BASEURL; ?>/views/site/logout.php">
+                    <span class="glyphicon glyphicon-log-out"></span>Logout</a>
+                  </li>
+                  <?php } ?>
+
                    <li><a><span class="glyphicon glyphicon-thumbs-up"></span></a></li>
                     <li><a><span class="glyphicon glyphicon-user"></span></a></li>
                 
